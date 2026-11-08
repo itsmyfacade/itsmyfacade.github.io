@@ -1,0 +1,304 @@
+{
+  "executive_overview": [
+    {
+      "status": "completed",
+      "retrieval_mode": "chroma",
+      "investigations": 3,
+      "avg_duration_ms": 753.0,
+      "evidence_records": 16
+    },
+    {
+      "status": "completed",
+      "retrieval_mode": "lexical",
+      "investigations": 3,
+      "avg_duration_ms": 864.0,
+      "evidence_records": 13
+    },
+    {
+      "status": "escalated",
+      "retrieval_mode": "chroma",
+      "investigations": 3,
+      "avg_duration_ms": 827.0,
+      "evidence_records": 14
+    },
+    {
+      "status": "escalated",
+      "retrieval_mode": "lexical",
+      "investigations": 4,
+      "avg_duration_ms": 827.0,
+      "evidence_records": 16
+    },
+    {
+      "status": "insufficient_evidence",
+      "retrieval_mode": "chroma",
+      "investigations": 4,
+      "avg_duration_ms": 790.0,
+      "evidence_records": 20
+    },
+    {
+      "status": "insufficient_evidence",
+      "retrieval_mode": "lexical",
+      "investigations": 3,
+      "avg_duration_ms": 790.0,
+      "evidence_records": 11
+    }
+  ],
+  "retrieval_summary": [
+    {
+      "retrieval_mode": "chroma",
+      "investigations": 10,
+      "retrieved_documents": 40,
+      "relevance_rate": 0.625,
+      "avg_score": 0.67
+    },
+    {
+      "retrieval_mode": "lexical",
+      "investigations": 10,
+      "retrieved_documents": 40,
+      "relevance_rate": 0.625,
+      "avg_score": 0.672
+    }
+  ],
+  "reliability_summary": [
+    {
+      "status": "insufficient_evidence",
+      "investigations": 7,
+      "avg_duration_ms": 790.0,
+      "citation_ratio": 0.7571
+    },
+    {
+      "status": "escalated",
+      "investigations": 7,
+      "avg_duration_ms": 827.0,
+      "citation_ratio": 0.7524
+    },
+    {
+      "status": "completed",
+      "investigations": 6,
+      "avg_duration_ms": 808.5,
+      "citation_ratio": 0.7806
+    }
+  ],
+  "investigation_explorer": [
+    {
+      "investigation_id": "INV-001",
+      "scenario_id": "SCN-001",
+      "domain": "authorization",
+      "status": "insufficient_evidence",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 457,
+      "evidence_count": 4,
+      "citation_count": 3
+    },
+    {
+      "investigation_id": "INV-002",
+      "scenario_id": "SCN-002",
+      "domain": "authentication",
+      "status": "escalated",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 494,
+      "evidence_count": 5,
+      "citation_count": 4
+    },
+    {
+      "investigation_id": "INV-003",
+      "scenario_id": "SCN-003",
+      "domain": "rate_limit",
+      "status": "completed",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 531,
+      "evidence_count": 6,
+      "citation_count": 5
+    },
+    {
+      "investigation_id": "INV-004",
+      "scenario_id": "SCN-004",
+      "domain": "webhook",
+      "status": "insufficient_evidence",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 568,
+      "evidence_count": 3,
+      "citation_count": 2
+    },
+    {
+      "investigation_id": "INV-005",
+      "scenario_id": "SCN-005",
+      "domain": "compatibility",
+      "status": "escalated",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 605,
+      "evidence_count": 4,
+      "citation_count": 3
+    },
+    {
+      "investigation_id": "INV-006",
+      "scenario_id": "SCN-006",
+      "domain": "credentials",
+      "status": "completed",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 642,
+      "evidence_count": 5,
+      "citation_count": 4
+    },
+    {
+      "investigation_id": "INV-007",
+      "scenario_id": "SCN-007",
+      "domain": "data_quality",
+      "status": "insufficient_evidence",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 679,
+      "evidence_count": 6,
+      "citation_count": 5
+    },
+    {
+      "investigation_id": "INV-008",
+      "scenario_id": "SCN-008",
+      "domain": "configuration",
+      "status": "escalated",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 716,
+      "evidence_count": 3,
+      "citation_count": 2
+    },
+    {
+      "investigation_id": "INV-009",
+      "scenario_id": "SCN-009",
+      "domain": "deployment",
+      "status": "completed",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 753,
+      "evidence_count": 4,
+      "citation_count": 3
+    },
+    {
+      "investigation_id": "INV-010",
+      "scenario_id": "SCN-010",
+      "domain": "performance",
+      "status": "insufficient_evidence",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 790,
+      "evidence_count": 5,
+      "citation_count": 4
+    },
+    {
+      "investigation_id": "INV-011",
+      "scenario_id": "SCN-011",
+      "domain": "observability",
+      "status": "escalated",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 827,
+      "evidence_count": 6,
+      "citation_count": 5
+    },
+    {
+      "investigation_id": "INV-012",
+      "scenario_id": "SCN-012",
+      "domain": "recovery",
+      "status": "completed",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 864,
+      "evidence_count": 3,
+      "citation_count": 2
+    },
+    {
+      "investigation_id": "INV-013",
+      "scenario_id": "SCN-013",
+      "domain": "authorization",
+      "status": "insufficient_evidence",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 901,
+      "evidence_count": 4,
+      "citation_count": 3
+    },
+    {
+      "investigation_id": "INV-014",
+      "scenario_id": "SCN-014",
+      "domain": "authentication",
+      "status": "escalated",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 938,
+      "evidence_count": 5,
+      "citation_count": 4
+    },
+    {
+      "investigation_id": "INV-015",
+      "scenario_id": "SCN-015",
+      "domain": "rate_limit",
+      "status": "completed",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 975,
+      "evidence_count": 6,
+      "citation_count": 5
+    },
+    {
+      "investigation_id": "INV-016",
+      "scenario_id": "SCN-016",
+      "domain": "webhook",
+      "status": "insufficient_evidence",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 1012,
+      "evidence_count": 3,
+      "citation_count": 2
+    },
+    {
+      "investigation_id": "INV-017",
+      "scenario_id": "SCN-017",
+      "domain": "compatibility",
+      "status": "escalated",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 1049,
+      "evidence_count": 4,
+      "citation_count": 3
+    },
+    {
+      "investigation_id": "INV-018",
+      "scenario_id": "SCN-018",
+      "domain": "credentials",
+      "status": "completed",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 1086,
+      "evidence_count": 5,
+      "citation_count": 4
+    },
+    {
+      "investigation_id": "INV-019",
+      "scenario_id": "SCN-019",
+      "domain": "data_quality",
+      "status": "insufficient_evidence",
+      "provider": "local",
+      "retrieval_mode": "chroma",
+      "duration_ms": 1123,
+      "evidence_count": 6,
+      "citation_count": 5
+    },
+    {
+      "investigation_id": "INV-020",
+      "scenario_id": "SCN-020",
+      "domain": "configuration",
+      "status": "escalated",
+      "provider": "local",
+      "retrieval_mode": "lexical",
+      "duration_ms": 1160,
+      "evidence_count": 3,
+      "citation_count": 2
+    }
+  ]
+}

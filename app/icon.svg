@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">OC monogram</title>
+  <desc id="desc">An original blue and violet OC engineering monogram.</desc>
+  <rect width="64" height="64" rx="14" fill="#0b1018"/>
+  <path d="M17 45 25.5 19h8L42 45h-6l-1.8-6.2H24.8L23 45h-6Zm9.3-11.4h6.4l-3.2-10.8-3.2 10.8Z" fill="#eef3f7"/>
+  <path d="M47 18h-5.5v28H47V18Z" fill="#4f86ff"/>
+  <path d="M43 18h4l-4 7v-7Z" fill="#9b8cff"/>
+</svg>

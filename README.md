@@ -1,86 +1,60 @@
 # Oneidy Constanza-Garcia | Engineering Portfolio
 
+**AI Application & Automation Engineer**
+
 The professional portfolio of Oneidy Constanza-Garcia, an AI Application & Automation Engineer focused on Python, backend systems, REST APIs, SQL, automation, applied AI, and application integrations.
 
 This site presents verified engineering work, technical decisions, validation evidence, and honest project limitations for recruiters and engineering interviewers.
 
 Visit the portfolio at [itsmyfacade.github.io](https://itsmyfacade.github.io/).
 
-## Featured work
+## Featured Projects
 
-### AEGIS
+### AEGIS — Evidence-Grounded Intelligence System
 
-An evidence-grounded incident investigation application built with FastAPI, LangGraph, SQLite, retrieval, provider abstractions, evidence validation, and automated QA. The case study includes real application screenshots and GitHub Actions evidence.
+An evidence-grounded AI investigation application developed with Python, FastAPI, LangGraph, SQLite, and retrieval-based workflows.
+
+Demonstrates backend application development, structured investigation workflows, evidence validation, provider integrations, and automated testing.
+
+The portfolio includes actual application screenshots and GitHub Actions CI/CD evidence.
 
 ### AEGIS Intelligence Observatory
 
-A deterministic analytics companion built with Python ETL, SQLite/SQL, validated synthetic records, CSV exports, and Power BI reporting. The portfolio includes the supplied Power BI report, report-page evidence, and a static interactive browser companion.
+A data engineering and analytics project featuring deterministic Python ETL pipelines, SQLite/SQL, validated synthetic datasets, and Power BI reporting.
+
+Demonstrates analytical modeling, investigation exploration, workflow analysis, and interactive browser-based visualization.
 
 The Observatory data is synthetic AEGIS-compatible demonstration data. It must not be interpreted as production telemetry or a production performance benchmark.
 
-The browser dashboard at [itsmyfacade.github.io/observatory](https://itsmyfacade.github.io/observatory/) is a static client-side companion powered by `data.json`; it is not a native Power BI embed and does not claim filtering controls. The native report is available as [AEGIS-Intelligence-Observatory.pbix](https://itsmyfacade.github.io/downloads/AEGIS-Intelligence-Observatory.pbix).
+The interactive browser companion is separate from the native Power BI report and is not a Power BI embed. It does not claim filtering controls that are not implemented.
 
-## Technology
+**Explore the Observatory:**
 
-Next.js, React, TypeScript, Python, FastAPI, LangGraph, SQLite, SQL, retrieval systems, Power BI, JavaScript, GitHub Actions, Pytest, Playwright, Ruff, and Pyright are represented across the featured projects. This portfolio itself uses Next.js static export, TypeScript, Biome, and lightweight CSS/React animation.
+- [Interactive Observatory](https://itsmyfacade.github.io/observatory/)
+- [Download Power BI Report (.pbix)](https://itsmyfacade.github.io/downloads/AEGIS-Intelligence-Observatory.pbix)
 
-## Local development
+## Engineering Technologies
 
-Requirements: Node.js and npm.
+**AI & Backend:** Python, FastAPI, LangGraph, retrieval systems, REST APIs.
 
-```bash
-git clone https://github.com/itsmyfacade/itsmyfacade.github.io.git
-cd itsmyfacade.github.io
-npm ci
-npm run dev
-```
+**Data & Analytics:** SQL, SQLite, Python ETL, Power BI.
 
-Open `http://localhost:3000`.
+**Web Development:** Next.js, React, TypeScript, JavaScript.
 
-Available checks:
+**Quality & Delivery:** GitHub Actions, automated testing, CI/CD.
 
-```bash
-npm run typecheck
-npm run lint
-npm run build
-npm audit --audit-level=high
-```
+## Portfolio Implementation
 
-The Observatory companion can be checked independently with:
+Built with Next.js, React, and TypeScript, using GitHub Pages for static hosting and GitHub Actions for automated build validation and deployment.
 
-```bash
-node --check public/observatory/app.js
-```
+**Live website:** https://itsmyfacade.github.io/
 
-## Static export and GitHub Pages
+## Resume & Contact
 
-`next.config.ts` uses `output: "export"` and generates the static site in `out/`. The repository includes `.github/workflows/deploy-pages.yml`, which runs type checking, linting, and the production build before publishing `out/` through GitHub Pages.
+**[Download Resume (PDF)](https://itsmyfacade.github.io/resume/Oneidy_Constanza_Garcia_AI_Engineer.pdf)**
 
-The intended root-domain repository is `itsmyfacade.github.io`. No deployment is performed by local commands; publishing requires pushing the reviewed repository to GitHub and enabling GitHub Pages with GitHub Actions.
+- **GitHub:** https://github.com/itsmyfacade
+- **LinkedIn:** https://linkedin.com/in/oneidy
+- **Email:** oneidyconstanzagarcia@gmail.com
 
-## Repository structure
-
-```text
-app/                       Next.js page, metadata, styles, favicon
-components/                Reusable reveal animation
-content/                   Typed profile, project, skills, and approach content
-public/observatory/        Static synthetic-data browser companion
-public/project-media/      Verified project screenshots and report renders
-public/downloads/          Power BI report download
-public/resume/             Verified resume PDF
-.github/workflows/         GitHub Pages deployment workflow
-```
-
-## Resume and contact
-
-Verified resume: [Download the resume](https://itsmyfacade.github.io/resume/Oneidy_Constanza_Garcia_AI_Engineer.pdf)
-
-- GitHub: [github.com/itsmyfacade](https://github.com/itsmyfacade)
-- LinkedIn: [linkedin.com/in/oneidy](https://linkedin.com/in/oneidy)
-- Email: [oneidyconstanzagarcia@gmail.com](mailto:oneidyconstanzagarcia@gmail.com)
-
-Oneidy is open to remote engineering opportunities.
-
-## Content boundaries
-
-The portfolio does not invent employers, dates, degrees, certifications, awards, production metrics, or deployment claims. AEGIS and the Observatory remain separate reference projects and are not modified by this portfolio repository.
+Open to remote engineering opportunities.

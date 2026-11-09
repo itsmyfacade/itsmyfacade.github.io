@@ -2,59 +2,75 @@
 
 **AI Application & Automation Engineer**
 
-The professional portfolio of Oneidy Constanza-Garcia, an AI Application & Automation Engineer focused on Python, backend systems, REST APIs, SQL, automation, applied AI, and application integrations.
+This portfolio presents verified engineering work across AI applications, Python services, REST APIs, SQL, automation, data workflows, testing, and cloud-connected deployments.
 
-This site presents verified engineering work, technical decisions, validation evidence, and honest project limitations for recruiters and engineering interviewers.
+**[View the live portfolio](https://itsmyfacade.github.io/)**
 
-Visit the portfolio at [itsmyfacade.github.io](https://itsmyfacade.github.io/).
+## Featured projects
 
-## Featured Projects
+### AEGIS: Evidence-Grounded Intelligence System
 
-### AEGIS — Evidence-Grounded Intelligence System
-
-An evidence-grounded AI investigation application developed with Python, FastAPI, LangGraph, SQLite, and retrieval-based workflows.
-
-Demonstrates backend application development, structured investigation workflows, evidence validation, provider integrations, and automated testing.
-
-The portfolio includes actual application screenshots and GitHub Actions CI/CD evidence.
+An evidence-grounded AI investigation application built with Python, FastAPI, LangGraph, LangChain, SQLite, retrieval workflows, structured synthesis, and citation verification. The portfolio includes authentic application and CI evidence.
 
 ### AEGIS Intelligence Observatory
 
-A data engineering and analytics project featuring deterministic Python ETL pipelines, SQLite/SQL, validated synthetic datasets, and Power BI reporting.
+A deterministic Python ETL and analytics companion using SQLite, SQL validation, CSV exports, a native Power BI report, and a static browser dashboard. Observatory records are synthetic AEGIS-compatible demonstration data and do not represent production telemetry.
 
-Demonstrates analytical modeling, investigation exploration, workflow analysis, and interactive browser-based visualization.
+- [Interactive browser companion](https://itsmyfacade.github.io/observatory/)
+- [Download the Power BI report](https://itsmyfacade.github.io/downloads/AEGIS-Intelligence-Observatory.pbix)
 
-The Observatory data is synthetic AEGIS-compatible demonstration data. It must not be interpreted as production telemetry or a production performance benchmark.
+The browser dashboard is separate from the native Power BI report and is not a Power BI embed.
 
-The interactive browser companion is separate from the native Power BI report and is not a Power BI embed. It does not claim filtering controls that are not implemented.
+### Sentiment Lab
 
-**Explore the Observatory:**
+A full-stack NLP application using real DistilBERT inference through a Flask API and Next.js interface. It supports positive and negative classification, confidence scores, single and batch analysis, session history, and CSV export.
 
-- [Interactive Observatory](https://itsmyfacade.github.io/observatory/)
-- [Download Power BI Report (.pbix)](https://itsmyfacade.github.io/downloads/AEGIS-Intelligence-Observatory.pbix)
+- [Live demo](https://sentiment-lab-web.onrender.com)
+- [Source repository](https://github.com/itsmyfacade/sentiment-app)
 
-## Engineering Technologies
+### Semantic Discovery
 
-**AI & Backend:** Python, FastAPI, LangGraph, retrieval systems, REST APIs.
+An embedding-based search application using MiniLM, normalized 384-dimensional vectors, cosine similarity, and an 80-record synthetic demonstration catalog. It supports semantic search, query comparison, catalog filtering, and CSV export.
 
-**Data & Analytics:** SQL, SQLite, Python ETL, Power BI.
+- [Live demo](https://semantic-discovery-web.onrender.com)
+- [Source repository](https://github.com/itsmyfacade/recommender-app)
 
-**Web Development:** Next.js, React, TypeScript, JavaScript.
+## Technology stack
 
-**Quality & Delivery:** GitHub Actions, automated testing, CI/CD.
+**AI and backend:** Python, Flask, FastAPI, LangGraph, LangChain, DistilBERT, Sentence Transformers, REST APIs.
 
-## Portfolio Implementation
+**Data and analytics:** SQL, SQLite, Python ETL, validation, Power BI, structured data workflows.
 
-Built with Next.js, React, and TypeScript, using GitHub Pages for static hosting and GitHub Actions for automated build validation and deployment.
+**Web development:** Next.js, React, TypeScript, JavaScript, HTML, CSS.
 
-**Live website:** https://itsmyfacade.github.io/
+**Quality and delivery:** Pytest, Ruff, Pyright, GitHub Actions, CI/CD, Docker, Render, GitHub Pages.
 
-## Resume & Contact
+## Local development
 
-**[Download Resume (PDF)](https://itsmyfacade.github.io/resume/Oneidy_Constanza_Garcia_AI_Engineer.pdf)**
+```bash
+npm ci
+npm run dev
+```
 
-- **GitHub:** https://github.com/itsmyfacade
-- **LinkedIn:** https://linkedin.com/in/oneidy
-- **Email:** oneidyconstanzagarcia@gmail.com
+Useful validation commands:
+
+```bash
+npm run typecheck
+npm run lint
+npm run build
+npm audit --audit-level=high
+```
+
+The site uses Next.js static export for GitHub Pages. The deployment workflow runs the validation commands, publishes the generated `out/` directory, and deploys through GitHub Pages. The portfolio itself is not Dockerized.
+
+## Evidence and accessibility
+
+Project case studies use authentic screenshots with descriptive captions. Images open in the existing accessible lightbox with keyboard controls, focus restoration, responsive sizing, and reduced-motion support. The site uses semantic sections, visible focus states, responsive layouts, and accessible navigation.
+
+## Resume and contact
+
+- [Download resume PDF](https://itsmyfacade.github.io/resume/Oneidy_Constanza_Garcia_AI_Engineer.pdf)
+- [LinkedIn](https://linkedin.com/in/oneidy)
+- [Email](mailto:oneidyconstanzagarcia@gmail.com)
 
 Open to remote engineering opportunities.

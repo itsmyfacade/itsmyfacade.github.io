@@ -19,11 +19,20 @@ const evidenceByProject = {
     ["/project-media/observatory-report-4.png", "Investigation Detail", "Power BI investigation detail drill-through page."],
     ["/project-media/observatory-report-5.png", "Investigation Explorer", "Power BI investigation explorer page."],
   ],
+  "sentiment-lab": [
+    ["/project-media/sentiment-lab-analysis.png", "Sentiment Lab analysis", "Sentiment Lab showing a real DistilBERT prediction, confidence score, and inference timing."],
+    ["/project-media/sentiment-lab-batch.png", "Sentiment Lab batch analysis", "Sentiment Lab showing multiple analyzed entries and session-level results."],
+  ],
+  "semantic-discovery": [
+    ["/project-media/semantic-discovery-search.png", "Semantic Discovery search", "Semantic Discovery showing a natural-language query and ranked MiniLM results."],
+    ["/project-media/semantic-discovery-comparison.png", "Semantic Discovery comparison", "Semantic Discovery showing query comparison over the synthetic catalog."],
+  ],
 } as const;
 
 function EvidenceGallery({ slug }: { slug: keyof typeof evidenceByProject }) {
   const images: GalleryImage[] = evidenceByProject[slug].map(([src, title, caption]) => ({ src, title, caption }));
-  return <ImageLightbox images={images} projectLabel={slug === "aegis" ? "AEGIS" : "AEGIS Intelligence Observatory"} />;
+  const projectLabel = slug === "aegis" ? "AEGIS" : slug === "observatory" ? "AEGIS Intelligence Observatory" : slug === "sentiment-lab" ? "Sentiment Lab" : "Semantic Discovery";
+  return <ImageLightbox images={images} projectLabel={projectLabel} />;
 }
 
 function hasEvidenceGallery(slug: string): slug is keyof typeof evidenceByProject {

@@ -1,0 +1,149 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  padding: max(0.75rem, env(safe-area-inset-top)) max(0.75rem, env(safe-area-inset-right)) max(0.75rem, env(safe-area-inset-bottom)) max(0.75rem, env(safe-area-inset-left));
+  overflow: hidden;
+  background: rgb(5 10 17 / 96%);
+  color: #eef3f7;
+}
+
+.toolbar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.counter,
+.controls button,
+.caption {
+  font: 500 0.72rem/1.4 'DM Mono', monospace;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.controls button,
+.nav {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #42566a;
+  background: #121d2a;
+  color: #eef3f7;
+  cursor: pointer;
+}
+
+.controls button:hover,
+.controls button:focus-visible,
+.nav:hover,
+.nav:focus-visible {
+  border-color: #4f86ff;
+  color: #fff;
+}
+
+.controls button:focus-visible,
+.nav:focus-visible {
+  outline: 2px solid #4f86ff;
+  outline-offset: 3px;
+}
+
+.viewerRow {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr) 3.25rem;
+  flex: 1 1 auto;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  margin-top: 0.75rem;
+}
+
+.nav {
+  z-index: 1;
+  justify-self: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.image {
+  user-select: none;
+  object-fit: contain;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.zoomed {
+  cursor: grab;
+  transition: none;
+}
+
+.zoomed:active {
+  cursor: grabbing;
+}
+
+.caption {
+  flex: 0 0 auto;
+  max-width: 900px;
+  margin: 0.8rem auto 0;
+  color: #aebdca;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .backdrop {
+    padding-inline: 0.65rem;
+  }
+
+  .toolbar {
+    align-items: flex-start;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .controls button {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    padding: 0.45rem;
+  }
+
+  .viewerRow {
+    grid-template-columns: 2.75rem minmax(0, 1fr) 2.75rem;
+  }
+
+  .caption {
+    font-size: 0.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transition: none;
+  }
+}

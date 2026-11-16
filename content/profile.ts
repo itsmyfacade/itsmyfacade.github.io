@@ -16,11 +16,11 @@ export type Profile = {
 };
 
 export const profile: Profile = {
-  name: "Oneidy Constanza-Garcia",
-  headline: "AI Application & Automation Engineer",
+  name: "Oneidy Constanza Garcia",
+  headline: "AI Application Engineer · Python Software Engineer",
   heroTitle: "Building intelligent applications. Engineering reliable systems.",
   specializations: ["AI applications", "Python software development", "backend and REST APIs", "full-stack systems", "SQL and data workflows", "automation", "cloud-connected integrations"],
-  shortBio: "I build practical software solutions that connect AI capabilities, backend development, automation, and structured data.",
+  shortBio: "I build intelligent applications, backend services, and reliable automation across Python, APIs, structured data, and applied AI.",
   longBio: "I work across AI applications, Python services, REST APIs, SQL and data workflows, automation, full-stack interfaces, and cloud-connected integrations. My broader toolkit includes C#, TypeScript, JavaScript, React, Next.js, and the testing practices that make systems easier to trust.",
   aboutBio: "I approach engineering as the work of connecting systems, solving problems, and making complex ideas operational. As a founder and hands-on technical contributor, I have worked across architecture, application implementation, integrations, data and storage workflows, testing, documentation, and product execution. I value understanding how a system works end to end, not just making one component function in isolation, and I bring that systems thinking to unfamiliar tools, changing requirements, and practical delivery.",
   email: "oneidyconstanzagarcia@gmail.com",

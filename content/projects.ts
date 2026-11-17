@@ -13,7 +13,7 @@ export type Project = {
   limitations: string[];
   metrics?: { label: string; value: string; detail: string }[];
   links?: { label: string; href: string; external?: boolean }[];
-  accent: "cyan" | "violet";
+  accent: "cyan" | "emerald";
 };
 
 export const projects: Project[] = [
@@ -119,7 +119,7 @@ export const projects: Project[] = [
       "Metrics are synthetic and do not represent AEGIS production performance.",
       "The Power BI report remains separate from the reproducible Python pipeline.",
     ],
-    accent: "violet",
+    accent: "emerald",
   },
   {
     slug: "sentiment-lab",
@@ -218,6 +218,6 @@ export const projects: Project[] = [
       { label: "Live demo", href: "https://semantic-discovery-web.onrender.com", external: true },
       { label: "Source", href: "https://github.com/itsmyfacade/recommender-app", external: true },
     ],
-    accent: "violet",
+    accent: "emerald",
   },
 ];

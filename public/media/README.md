@@ -1,15 +1,15 @@
 # Portfolio media provenance
 
-All three clips below were downloaded from their approved Pexels pages under the [Pexels License](https://www.pexels.com/license/), then transcoded locally to 1280×720 H.264 MP4 for static web delivery. The source pages describe abstract animation/data-stream footage; none of the selected clips contains people.
+The local clips below are optimized copies of approved stock footage, transcoded to H.264 MP4 for static web delivery. The source pages describe abstract animation/data-stream footage; none of the selected clips contains people.
 
-## Hero — geometric light animation
+## Hero — liquid waves
 
 - Asset: `aegis-hero-neon.mp4`
 - Poster: `aegis-hero-neon-poster.jpg`
-- Source: https://www.pexels.com/video/dynamic-abstract-geometric-light-animation-35997009/
-- Direct source download: https://videos.pexels.com/video-files/35997009/15263253_1920_1080_24fps.mp4
-- License: Pexels License, https://www.pexels.com/license/
-- Local treatment: 1280×720 H.264 MP4, 40-second excerpt, muted loop, browser playback rate `0.6`.
+- Source: https://pixabay.com/videos/ai-generated-liquid-waves-abstract-188933/
+- Direct source download: https://cdn.pixabay.com/video/2023/11/13/188933-884185295_large.mp4
+- License: Pixabay Content License, https://pixabay.com/service/license-summary/
+- Local treatment: 1296×720 H.264 MP4, 30 fps, 8.67-second muted loop, browser playback rate `0.8`.
 
 ## Mission Control — data streams
 

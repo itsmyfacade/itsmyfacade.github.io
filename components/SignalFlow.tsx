@@ -14,7 +14,7 @@ export function SignalFlow() {
       <p>One bounded path from technical question to evidence-backed output. The diagram describes the implemented workflow; it is not a live trace of this page.</p>
     </div>
     <ul className={styles.track} aria-label="AEGIS investigation workflow">
-      <div className={styles.beam} aria-hidden="true" />
+      <li className={styles.beam} aria-hidden="true" />
       {stages.map(stage => <li key={stage.index} className={styles.stage}><span>{stage.index}</span><strong>{stage.label}</strong><small>{stage.detail}</small><i aria-hidden="true" /></li>)}
     </ul>
     <div className={styles.footer}><span>FastAPI</span><span>LangGraph</span><span>Retrieval</span><span>SQLite</span><span>Citation validation</span></div>

@@ -17,13 +17,14 @@ body{overflow-x:hidden}a:focus-visible{outline:2px solid var(--cyan);outline-off
 @media(max-width:800px){.section-label{align-items:flex-start;flex-direction:column}.section-label span{text-align:left}.hero-bottom{gap:1.5rem}.project-footer{margin-top:1.5rem}}
 
 /* Approved cinematic media: explicit layers keep footage visible and controls readable. */
-.hero{position:relative;isolation:isolate;overflow:hidden}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;mix-blend-mode:normal;filter:none;z-index:0}
-.hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#0b1018d9 0%,#0b101877 46%,#0b101833 100%),linear-gradient(180deg,#0b101833 0%,#0b1018b8 100%)}
+.hero{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:none;min-height:100svh;padding:7rem 1.5rem 2rem}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% center;opacity:1;mix-blend-mode:normal;filter:none;z-index:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#0b1018d9 0%,#0b101877 42%,#0b101822 100%)}
 .hero-ambient{position:absolute;inset:0;z-index:1;overflow:hidden;background:none}
 .hero .hero-ambient:before{display:none}
 .hero-orbit,.hero-scanline{z-index:2}
-.hero>div:not(.hero-ambient):not(.hero-overlay){position:relative;z-index:2}
+.hero-content{position:relative;z-index:2;width:min(100%,1280px);min-height:calc(100svh - 9rem);margin:0 auto;display:flex;flex-direction:column;justify-content:center}
+.hero-status{margin-top:4rem}
 .field-video,.contact-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;mix-blend-mode:screen;pointer-events:none}
 .field-video{z-index:0;filter:saturate(.9) contrast(1.08)}
 .intelligence-field:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,#0d1622e8,#0d162288 55%,#0d1622aa),linear-gradient(180deg,#0d162266,#0d1622e8)}
@@ -32,7 +33,7 @@ body{overflow-x:hidden}a:focus-visible{outline:2px solid var(--cyan);outline-off
 .contact-video{z-index:0;opacity:.33;mix-blend-mode:screen;filter:saturate(.8) contrast(1.1)}
 .contact-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,#111a25e6,#111a25a8 48%,#111a25f5)}
 .contact-content{position:relative;z-index:2}
-@media(max-width:800px){.hero-video{object-position:center}.field-video,.contact-video{opacity:.28}}
+@media(max-width:800px){.hero{min-height:100svh;padding:5rem 1rem 1.5rem}.hero-content{min-height:calc(100svh - 6.5rem)}.hero h1{font-size:clamp(2.75rem,13.5vw,5rem)}.hero-video{object-position:58% center}.field-video,.contact-video{opacity:.28}}
 @media(prefers-reduced-motion:reduce){.hero-video,.field-video,.contact-video{opacity:0}.hero{background:url('/media/aegis-hero-neon-poster.jpg') center/cover no-repeat}.intelligence-field{background:url('/media/aegis-network-streams-poster.jpg') center/cover no-repeat}.contact{background:url('/media/aegis-closing-particles-poster.jpg') center/cover no-repeat}}
 
 /* Launch palette: electric blue and violet, with no turquoise surfaces. */

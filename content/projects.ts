@@ -11,8 +11,9 @@ export type Project = {
   validation: string[];
   outcomes: string[];
   limitations: string[];
+  metrics?: { label: string; value: string; detail: string }[];
   links?: { label: string; href: string; external?: boolean }[];
-  accent: "cyan" | "violet";
+  accent: "cyan" | "emerald";
 };
 
 export const projects: Project[] = [
@@ -33,7 +34,7 @@ export const projects: Project[] = [
       "LangChain",
       "SQLite",
       "Hosted-lite lexical retrieval",
-      "Optional Chroma semantic retrieval",
+      "Local JSON semantic index",
       "AWS Bedrock / Amazon Nova Micro",
       "Docker and GitHub Actions",
     ],
@@ -45,21 +46,35 @@ export const projects: Project[] = [
       "Expose uncertainty and evidence gaps instead of overstating certainty.",
     ],
     validation: [
-      "Pytest",
+      "113 Python tests at validated release",
       "HTTPX API contracts",
-      "Playwright Chromium coverage",
+      "15 Playwright browser tests at validated release",
       "Ruff and Pyright",
       "Hosted-lite smoke checks",
     ],
     outcomes: [
       "A reproducible local incident-investigation demo.",
       "Five-stage bounded workflow with evidence verification.",
-      "30 narrative documents and 20 synthetic scenarios.",
+      "20 interactive synthetic investigation scenarios.",
+      "1,200 synthetic retrieval benchmark cases over 90 evidence documents.",
+      "40-case human-supervised, AI-assisted model-output review completed; independent ground-truth review pending.",
     ],
     limitations: [
       "Synthetic data is not production telemetry.",
       "Hosted-lite uses lexical retrieval and deterministic local synthesis; it does not actively invoke Bedrock.",
-      "Standard semantic retrieval remains optional and security-blocked by unresolved Chroma advisories.",
+      "The 30-document narrative corpus used by the interactive demo is distinct from the 90-document benchmark corpus.",
+      "Recall@5, MRR, and nDCG describe retrieval behavior, not overall AI accuracy or semantic entailment.",
+    ],
+    metrics: [
+      { label: "Recall@5", value: "0.6315 → 0.8375", detail: "32.6% relative improvement" },
+      { label: "MRR", value: "0.8559", detail: "optimized profile" },
+      { label: "nDCG@5", value: "0.8462", detail: "optimized profile" },
+      { label: "Review", value: "40 cases", detail: "human-supervised; ground-truth review pending" },
+    ],
+    links: [
+      { label: "Source repository", href: "https://github.com/itsmyfacade/RAG-AI-Evidence-Grounded-Intelligence-System", external: true },
+      { label: "Vercel frontend", href: "https://aegis-peach-tau-10.vercel.app/", external: true },
+      { label: "Render demonstration", href: "https://aegis-ai-y41k.onrender.com/demo/", external: true },
     ],
     accent: "cyan",
   },
@@ -104,7 +119,7 @@ export const projects: Project[] = [
       "Metrics are synthetic and do not represent AEGIS production performance.",
       "The Power BI report remains separate from the reproducible Python pipeline.",
     ],
-    accent: "violet",
+    accent: "emerald",
   },
   {
     slug: "sentiment-lab",
@@ -203,6 +218,6 @@ export const projects: Project[] = [
       { label: "Live demo", href: "https://semantic-discovery-web.onrender.com", external: true },
       { label: "Source", href: "https://github.com/itsmyfacade/recommender-app", external: true },
     ],
-    accent: "violet",
+    accent: "emerald",
   },
 ];

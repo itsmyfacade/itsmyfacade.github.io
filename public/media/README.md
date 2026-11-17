@@ -1,14 +1,32 @@
 # Portfolio media provenance
 
-## Hero footage
+All three clips below were downloaded from their approved Pexels pages under the [Pexels License](https://www.pexels.com/license/), then transcoded locally to 1280×720 H.264 MP4 for static web delivery. The source pages describe abstract animation/data-stream footage; none of the selected clips contains people.
 
-- Asset: `mixkit-server-room-23158-360.mp4`
-- Poster: `mixkit-server-room-23158-poster.jpg`
-- Subject: engineers working in a server room
-- Source page: https://mixkit.co/free-stock-video/engineer-team-working-in-a-server-room-23158/
-- Direct asset: https://assets.mixkit.co/videos/23158/23158-360.mp4
-- License: Mixkit video free-stock license, linked from the asset page at https://mixkit.co/license/#videoFree
-- Local size: approximately 4.4 MB
-- Use: muted, looping hero background with a dark readability overlay; the CSS/SVG environment remains the fallback.
+## Hero — slow neon abstraction
 
-The source page and license were checked before download. The asset is not presented as original work by Oneidy Constanza Garcia.
+- Asset: `aegis-hero-neon.mp4`
+- Poster: `aegis-hero-neon-poster.jpg`
+- Source: https://www.pexels.com/video/futuristic-neon-digital-abstract-animation-30064799/
+- Direct source download: https://videos.pexels.com/video-files/30064799/12896244_3840_2160_60fps.mp4
+- License: Pexels License, https://www.pexels.com/license/
+- Local treatment: 1280×720 H.264 MP4, muted loop, browser playback rate `0.6`.
+
+## Mission Control — data streams
+
+- Asset: `aegis-network-streams.mp4`
+- Poster: `aegis-network-streams-poster.jpg`
+- Source: https://www.pexels.com/video/dynamic-neon-data-streams-background-34128965/
+- Direct source download: https://videos.pexels.com/video-files/34128965/14471945_3840_2160_30fps.mp4
+- License: Pexels License, https://www.pexels.com/license/
+- Local treatment: 1280×720 H.264 MP4, muted loop, paused when offscreen.
+
+## Closing — green particles
+
+- Asset: `aegis-closing-particles.mp4`
+- Poster: `aegis-closing-particles-poster.jpg`
+- Source: https://www.pexels.com/video/abstract-digital-animation-with-sparkling-particles-11374537/
+- Direct source download: https://videos.pexels.com/video-files/11374537/11374537-uhd_3840_2160_30fps.mp4
+- License: Pexels License, https://www.pexels.com/license/
+- Local treatment: 1280×720 H.264 MP4, muted loop, paused when offscreen.
+
+The local files are optimized copies of the approved source footage and are not presented as original work by Oneidy Constanza Garcia.

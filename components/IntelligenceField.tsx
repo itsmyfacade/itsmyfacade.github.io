@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { CinematicVideo } from "./CinematicVideo";
 import styles from "./IntelligenceField.module.css";
 
 const nodes = [
@@ -26,6 +27,7 @@ export function IntelligenceField() {
   }, []);
 
   return <section ref={ref} className={`${styles["intelligence-field"]} intelligence-field`} aria-labelledby="field-title">
+    <CinematicVideo className="field-video" src="/media/aegis-network-streams.mp4" poster="/media/aegis-network-streams-poster.jpg" />
     <div className={styles["field-grid"]} aria-hidden="true" />
     <div className={styles["field-intro"]}><p className="eyebrow">MISSION CONTROL / SELECT A SYSTEM</p><h2 id="field-title">A portfolio built as<br /><em>an inspectable network.</em></h2><p>Each node is an independent public project. Follow the evidence trail into the implementation, constraints, and validation behind it.</p></div>
     <div className={styles["field-map"]}>

@@ -2,7 +2,7 @@
 
 The local clips below are optimized copies of approved stock footage, transcoded to H.264 MP4 for static web delivery. The source pages describe abstract animation/data-stream footage; none of the selected clips contains people.
 
-## Hero — liquid waves
+## Hero: liquid waves
 
 - Asset: `aegis-hero-neon.mp4`
 - Poster: `aegis-hero-neon-poster.jpg`
@@ -11,7 +11,7 @@ The local clips below are optimized copies of approved stock footage, transcoded
 - License: Pixabay Content License, https://pixabay.com/service/license-summary/
 - Local treatment: 1296×720 H.264 MP4, 30 fps, 8.67-second muted loop, browser playback rate `0.8`.
 
-## Mission Control — data streams
+## Mission Control: data streams
 
 - Asset: `aegis-network-streams.mp4`
 - Poster: `aegis-network-streams-poster.jpg`
@@ -20,7 +20,7 @@ The local clips below are optimized copies of approved stock footage, transcoded
 - License: Pexels License, https://www.pexels.com/license/
 - Local treatment: 1280×720 H.264 MP4, muted loop, paused when offscreen.
 
-## Closing — green particles
+## Closing: green particles
 
 - Asset: `aegis-closing-particles.mp4`
 - Poster: `aegis-closing-particles-poster.jpg`

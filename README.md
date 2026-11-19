@@ -19,7 +19,7 @@ A deterministic Python ETL and analytics companion using SQLite, SQL validation,
 - [Interactive browser companion](https://itsmyfacade.github.io/observatory/)
 - [Download the Power BI report](https://itsmyfacade.github.io/downloads/AEGIS-Intelligence-Observatory.pbix)
 
-The browser dashboard is separate from the native Power BI report and is not a Power BI embed.
+The browser dashboard is separate from the native Power BI report and is not a Power BI embed. It provides five local views—Executive Overview, Retrieval Analysis, Evidence Quality, Performance & Reliability, and Investigation Explorer—derived from 20 synthetic investigation records. It does not represent live production telemetry or the separate 1,200-case retrieval benchmark. See [Observatory notes](docs/OBSERVATORY.md) for data boundaries.
 
 ### Sentiment Lab
 
@@ -61,7 +61,7 @@ npm run build
 npm audit --audit-level=high
 ```
 
-The site uses Next.js static export for GitHub Pages. The deployment workflow runs the validation commands, publishes the generated `out/` directory, and deploys through GitHub Pages. The portfolio itself is not Dockerized.
+The site uses Next.js static export for GitHub Pages. The deployment workflow runs the validation commands, publishes the generated `out/` directory, and deploys through GitHub Pages. The portfolio itself is not Dockerized. Private source-asset handling and the limits of browser-delivered media are documented in [Private asset workflow](docs/PRIVATE_ASSET_WORKFLOW.md); no private asset credentials are shipped to the client.
 
 ## Evidence and accessibility
 

@@ -54,9 +54,12 @@
     const max = Math.max(...entries.map((entry) => Number(entry.value)), 1);
     entries.forEach((entry) => {
       const row = make("div", "chart-row");
-      const button = make("button", `chart-bar ${config.clickable ? "is-clickable" : ""}`);
-      button.type = "button";
-      button.setAttribute("aria-label", `${entry.label}: ${number(entry.value, config.digits || 0)}`);
+      const interactive = Boolean(config.clickable);
+      const button = make(interactive ? "button" : "div", `chart-bar ${interactive ? "is-clickable" : ""}`);
+      if (interactive) {
+        button.type = "button";
+        button.setAttribute("aria-label", `${entry.label}: ${number(entry.value, config.digits || 0)}`);
+      }
       const label = make("span", "chart-label", entry.label);
       const track = make("span", "chart-track");
       const fill = make("span", `chart-fill ${config.tone || "tone-cyan"}`);
@@ -117,11 +120,12 @@
 
   function renderPerformance(rows) {
     const durations = rows.map((row) => Number(row.duration_ms || 0)).sort((a, b) => a - b);
-    const median = durations.length ? durations[Math.floor((durations.length - 1) / 2)] : 0;
-    chart($("#latency-chart"), [{ key: "minimum", label: "Minimum", value: durations[0] || 0 }, { key: "median", label: "Median", value: median }, { key: "maximum", label: "Maximum", value: durations.at(-1) || 0 }], { suffix: " ms", tone: "tone-blue" });
+    const midpoint = Math.floor(durations.length / 2);
+    const median = durations.length ? (durations.length % 2 ? durations[midpoint] : (durations[midpoint - 1] + durations[midpoint]) / 2) : 0;
+    chart($("#latency-chart"), [{ key: "minimum", label: "Minimum", value: durations[0] || 0 }, { key: "median", label: "Median", value: median }, { key: "maximum", label: "Maximum", value: durations.at(-1) || 0 }], { suffix: " ms", digits: 1, tone: "tone-blue" });
     chart($("#provider-chart"), sortedEntries(aggregate(rows, "provider")).map(([key, value]) => ({ key, label: title(key), value })), { tone: "tone-emerald" });
     const target = $("#reliability-summary"); clear(target);
-    (state.data.reliability_summary || []).forEach((row) => { const item = make("div", "summary-item"); item.append(make("span", "eyebrow", title(row.status)), make("strong", "summary-value", `${number(row.citation_ratio * 100, 1)}%`), make("small", "summary-detail", `${number(row.investigations)} investigations · avg ${number(row.avg_duration_ms, 1)} ms citation ratio`)); target.append(item); });
+    (state.data.reliability_summary || []).forEach((row) => { const item = make("div", "summary-item"); item.append(make("span", "eyebrow", title(row.status)), make("strong", "summary-value", `${number(row.citation_ratio * 100, 1)}%`), make("small", "summary-detail", `citation ratio · ${number(row.investigations)} investigations · average duration ${number(row.avg_duration_ms, 1)} ms`)); target.append(item); });
   }
 
   function renderExplorer(rows) {

@@ -14,12 +14,12 @@ An evidence-grounded AI investigation application built with Python, FastAPI, La
 
 ### AEGIS Intelligence Observatory
 
-A deterministic Python ETL and analytics companion using SQLite, SQL validation, CSV exports, a native Power BI report, and a static browser dashboard. Observatory records are synthetic AEGIS-compatible demonstration data and do not represent production telemetry.
+A deterministic Python ETL and analytics project using SQLite validation, CSV exports, and a user-authored Microsoft Power BI report. Observatory records are synthetic AEGIS-compatible demonstration data and do not represent production telemetry.
 
-- [Interactive browser companion](https://itsmyfacade.github.io/observatory/)
+- [Open the Observatory case study](https://itsmyfacade.github.io/#observatory)
 - [Download the Power BI report](https://itsmyfacade.github.io/downloads/AEGIS-Intelligence-Observatory.pbix)
 
-The browser dashboard is separate from the native Power BI report and is not a Power BI embed. It provides five local views—Executive Overview, Retrieval Analysis, Evidence Quality, Performance & Reliability, and Investigation Explorer—derived from 20 synthetic investigation records. It does not represent live production telemetry or the separate 1,200-case retrieval benchmark. See [Observatory notes](docs/OBSERVATORY.md) for data boundaries.
+The case study presents five preserved screenshots from the original Power BI report and keeps the native `.pbix` available for download. It is not a Power BI Service embed or live analytics service. See [Observatory notes](docs/OBSERVATORY.md) for the Python pipeline, report handoff, and data boundaries.
 
 ### Sentiment Lab
 

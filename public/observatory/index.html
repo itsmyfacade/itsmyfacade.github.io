@@ -2,73 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="AEGIS Intelligence Observatory browser companion using synthetic demonstration data.">
-  <title>AEGIS Observatory | Intelligence Analytics</title>
-  <link rel="icon" href="../icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=../#observatory">
+  <link rel="canonical" href="https://itsmyfacade.github.io/#observatory">
+  <title>AEGIS Intelligence Observatory</title>
 </head>
 <body>
-  <a class="skip-link" href="#dashboard">Skip to dashboard</a>
-  <div class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="Return to portfolio"><span class="brand-mark">A</span><span>AEGIS <small>OBSERVATORY</small></span></a>
-      <div class="topbar-meta"><span class="status-dot" aria-hidden="true"></span><span>LOCAL ANALYTICS COMPANION</span><span class="meta-divider">/</span><span>SYNTHETIC DATA</span></div>
-      <a class="back-link" href="/">Portfolio <span aria-hidden="true">↗</span></a>
-    </header>
-    <main id="dashboard" tabindex="-1">
-      <section class="intro-block" aria-labelledby="page-title">
-        <div><p class="eyebrow">AEGIS / INTELLIGENCE OBSERVATORY</p><h1 id="page-title">See the system<br><em>through its evidence.</em></h1></div>
-        <div class="intro-copy"><p>A Power BI-inspired browser companion for exploring retrieval, evidence quality, workflow reliability, and investigation outcomes.</p><p class="disclaimer">Synthetic demonstration data · static local analysis · not live production telemetry</p></div>
-      </section>
-      <section class="control-rail" aria-label="Dashboard controls">
-        <div class="view-tabs" role="tablist" aria-label="Observatory views">
-          <button class="view-tab is-active" role="tab" aria-selected="true" aria-controls="view-overview" data-view="overview">Executive overview</button>
-          <button class="view-tab" role="tab" aria-selected="false" aria-controls="view-retrieval" data-view="retrieval">Retrieval analysis</button>
-          <button class="view-tab" role="tab" aria-selected="false" aria-controls="view-evidence" data-view="evidence">Evidence quality</button>
-          <button class="view-tab" role="tab" aria-selected="false" aria-controls="view-performance" data-view="performance">Performance &amp; reliability</button>
-          <button class="view-tab" role="tab" aria-selected="false" aria-controls="view-explorer" data-view="explorer">Investigation explorer</button>
-        </div>
-        <div class="filters" aria-label="Filter investigations">
-          <label>Search <input id="search" type="search" placeholder="ID, scenario, or domain" autocomplete="off"></label>
-          <label>Status <select id="status-filter"><option value="all">All statuses</option></select></label>
-          <label>Retrieval <select id="retrieval-filter"><option value="all">All modes</option></select></label>
-          <label>Domain <select id="domain-filter"><option value="all">All domains</option></select></label>
-          <button id="reset-filters" class="reset-button" type="button">Reset filters</button>
-        </div>
-      </section>
-      <div id="error-state" class="state-panel is-hidden" role="alert"><strong>Observatory data unavailable.</strong><span id="error-message">Check that the static data file is available and try again.</span></div>
-      <div id="loading-state" class="state-panel" role="status">Loading local observability dataset…</div>
-      <div id="app-content" class="is-hidden">
-        <section id="view-overview" class="dashboard-view" role="tabpanel" aria-labelledby="page-title" data-panel="overview">
-          <div id="kpi-grid" class="kpi-grid"></div>
-          <div class="hero-grid"><article class="panel panel-large"><div class="panel-heading"><div><p class="eyebrow">OUTCOME MIX</p><h2>Investigation status</h2></div><span class="panel-note" id="overview-count"></span></div><div id="status-chart" class="chart-area"></div></article><article class="panel"><div class="panel-heading"><div><p class="eyebrow">RETRIEVAL PROFILE</p><h2>Mode comparison</h2></div></div><div id="retrieval-chart" class="chart-area"></div></article></div>
-          <div class="split-grid"><article class="panel"><div class="panel-heading"><div><p class="eyebrow">DOMAIN COVERAGE</p><h2>Where investigations cluster</h2></div></div><div id="domain-chart" class="chart-area chart-compact"></div></article><article class="panel insight-panel"><p class="eyebrow">READOUT</p><h2 id="overview-insight">Select a bar to filter the workspace.</h2><p id="overview-insight-copy">Every visual is derived from the 20 investigation-level records in the synthetic Observatory dataset. Summary cards update with your active filters; source summary metrics remain explicitly labeled where they cannot be recomputed at row level.</p><div class="insight-line"><span class="status-dot"></span><span>Evidence-grounded analysis · no live telemetry</span></div></article></div>
-        </section>
-        <section id="view-retrieval" class="dashboard-view is-hidden" role="tabpanel" aria-labelledby="page-title" data-panel="retrieval">
-          <div class="section-heading"><div><p class="eyebrow">VIEW 02 / RETRIEVAL ANALYSIS</p><h2>Compare the retrieval path.</h2></div><p>Mode-level comparisons use the investigation explorer records. The dataset preserves the source labels, including the historical <code>chroma</code> identifier.</p></div>
-          <div class="hero-grid"><article class="panel panel-large"><div class="panel-heading"><div><p class="eyebrow">AVERAGE DURATION</p><h2>Latency by mode</h2></div><span class="panel-note">milliseconds</span></div><div id="retrieval-duration-chart" class="chart-area"></div></article><article class="panel"><div class="panel-heading"><div><p class="eyebrow">EVIDENCE RETURN</p><h2>Documents per mode</h2></div></div><div id="retrieval-evidence-chart" class="chart-area"></div></article></div>
-          <article class="panel data-panel"><div class="panel-heading"><div><p class="eyebrow">SOURCE SUMMARY</p><h2>Declared retrieval measurements</h2></div><span class="panel-note">unfiltered source fields</span></div><div id="retrieval-summary" class="summary-grid"></div></article>
-        </section>
-        <section id="view-evidence" class="dashboard-view is-hidden" role="tabpanel" aria-labelledby="page-title" data-panel="evidence">
-          <div class="section-heading"><div><p class="eyebrow">VIEW 03 / EVIDENCE QUALITY</p><h2>Inspect what supports a finding.</h2></div><p>Evidence and citation distributions are calculated from available investigation-level fields. They do not establish semantic entailment or overall answer accuracy.</p></div>
-          <div class="hero-grid"><article class="panel panel-large"><div class="panel-heading"><div><p class="eyebrow">EVIDENCE DISTRIBUTION</p><h2>Records per investigation</h2></div></div><div id="evidence-chart" class="chart-area"></div></article><article class="panel"><div class="panel-heading"><div><p class="eyebrow">CITATION DISTRIBUTION</p><h2>References per investigation</h2></div></div><div id="citation-chart" class="chart-area"></div></article></div>
-          <div class="split-grid"><article class="panel"><div class="panel-heading"><div><p class="eyebrow">STATUS QUALITY</p><h2>Evidence by outcome</h2></div></div><div id="evidence-status-chart" class="chart-area chart-compact"></div></article><article class="panel insight-panel"><p class="eyebrow">INTERPRETATION BOUNDARY</p><h2>Counts show evidence shape, not proof.</h2><p>The browser companion exposes the evidence and citation counts present in the synthetic records. It intentionally does not invent source excerpts, root causes, or semantic support judgments that are absent from the dataset.</p><div class="boundary-list"><span>Available: evidence count</span><span>Available: citation count</span><span>Not available: semantic entailment</span></div></article></div>
-        </section>
-        <section id="view-performance" class="dashboard-view is-hidden" role="tabpanel" aria-labelledby="page-title" data-panel="performance">
-          <div class="section-heading"><div><p class="eyebrow">VIEW 04 / PERFORMANCE &amp; RELIABILITY</p><h2>Follow the operational signal.</h2></div><p>Duration values are investigation-level synthetic measurements. There is no timestamp field, so this view does not fabricate a time series.</p></div>
-          <div class="hero-grid"><article class="panel panel-large"><div class="panel-heading"><div><p class="eyebrow">DURATION RANGE</p><h2>Investigation latency</h2></div><span class="panel-note">min / median / max</span></div><div id="latency-chart" class="chart-area"></div></article><article class="panel"><div class="panel-heading"><div><p class="eyebrow">PROVIDER</p><h2>Execution source</h2></div></div><div id="provider-chart" class="chart-area"></div></article></div>
-          <article class="panel reliability-panel"><div class="panel-heading"><div><p class="eyebrow">RELIABILITY SUMMARY</p><h2>Declared source metrics</h2></div><span class="panel-note">not recalculated under row filters</span></div><div id="reliability-summary" class="summary-grid"></div></article>
-        </section>
-        <section id="view-explorer" class="dashboard-view is-hidden" role="tabpanel" aria-labelledby="page-title" data-panel="explorer">
-          <div class="section-heading"><div><p class="eyebrow">VIEW 05 / INVESTIGATION EXPLORER</p><h2>Open the individual record.</h2></div><p id="explorer-count">Select a row to inspect the fields available in the source dataset.</p></div>
-          <article class="panel table-panel"><div class="table-toolbar"><span id="table-summary" class="panel-note"></span><label>Sort <select id="sort-field"><option value="investigation_id">Investigation ID</option><option value="duration_ms">Duration</option><option value="evidence_count">Evidence count</option><option value="citation_count">Citation count</option><option value="status">Status</option></select></label></div><div class="table-scroll"><table><thead><tr><th scope="col">ID</th><th scope="col">Scenario</th><th scope="col">Domain</th><th scope="col">Status</th><th scope="col">Provider</th><th scope="col">Retrieval</th><th scope="col">Duration</th><th scope="col">Evidence</th><th scope="col">Citations</th></tr></thead><tbody id="explorer-body"></tbody></table></div></article>
-        </section>
-      </div>
-    </main>
-    <footer><span>AEGIS OBSERVATORY</span><span>Synthetic demonstration data · static browser companion</span><a href="/downloads/AEGIS-Intelligence-Observatory.pbix" download>Download native Power BI report ↗</a></footer>
-  </div>
-  <aside id="detail-drawer" class="detail-drawer" aria-hidden="true" aria-labelledby="detail-title"><div class="drawer-backdrop" data-close-drawer></div><div class="drawer-panel"><button class="drawer-close" type="button" aria-label="Close investigation details" data-close-drawer>×</button><p class="eyebrow">INVESTIGATION RECORD</p><h2 id="detail-title">Select a record</h2><div id="detail-content"></div></div></aside>
-  <script src="app.js"></script>
+  <main>
+    <h1>AEGIS Intelligence Observatory</h1>
+    <p>This project is presented in the portfolio case study.</p>
+    <p><a href="../#observatory">Continue to the Observatory case study</a></p>
+  </main>
+  <script>
+    window.location.replace('../#observatory');
+  </script>
 </body>
 </html>

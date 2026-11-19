@@ -23,4 +23,4 @@ These are approved, public-facing screenshots rendered by the portfolio case stu
 - `semantic-discovery-search.png`
 - `semantic-discovery-comparison.png`
 
-Do not add screenshots containing credentials, private prompts, local filesystem paths, evaluator notes, or sensitive data. The browser Observatory is a separate synthetic-data companion and does not claim to be live telemetry.
+Do not add screenshots containing credentials, private prompts, local filesystem paths, evaluator notes, or sensitive data. Observatory screenshots are static views of the user-authored Power BI report and do not represent live telemetry or native Power BI Service interactivity.

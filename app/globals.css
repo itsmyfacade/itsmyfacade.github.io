@@ -56,3 +56,5 @@ body{overflow-x:hidden}a:focus-visible{outline:2px solid var(--cyan);outline-off
 .case-semantic-discovery .case-grid h3,.case-semantic-discovery .eyebrow{color:#49d6ff}
 .contact h2 em{color:#49d6ff}.contact .eyebrow{color:#38f2b0}.contact-links a:hover{color:#38f2b0}
 .text-link:hover,.case-link:hover{color:#38f2b0}.validation-list span{border-color:#276b67;color:#b8f8e2}
+/* Keep anchored case studies visible below the sticky header. */
+#observatory{scroll-margin-top:6.5rem}

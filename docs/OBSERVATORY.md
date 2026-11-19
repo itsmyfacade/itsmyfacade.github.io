@@ -1,26 +1,25 @@
 # AEGIS Intelligence Observatory
 
-The Observatory is a static browser companion for the AEGIS Intelligence Observatory project. It uses the checked-in `public/observatory/data.json` dataset, which contains 20 synthetic investigation records plus source summary arrays. It is not connected to production telemetry and is separate from the 1,200-case AEGIS retrieval benchmark.
+The Observatory is the data-engineering and analytics case study at [`/#observatory`](https://itsmyfacade.github.io/#observatory). It documents a deterministic Python ETL pipeline that generates synthetic AEGIS-compatible records, validates a normalized SQLite model, and exports portable CSV reporting data for a user-authored Microsoft Power BI report.
 
-## Views
+## Canonical presentation
 
-- **Executive overview** — filtered KPI cards, outcome distribution, retrieval-mode comparison, and domain coverage.
-- **Retrieval analysis** — mode-level duration and evidence comparisons plus the declared source summary.
-- **Evidence quality** — evidence and citation distributions with explicit semantic-support boundaries.
-- **Performance & reliability** — min/median/max duration, provider distribution, and declared reliability summary.
-- **Investigation explorer** — searchable, sortable records with keyboard-accessible detail drawers.
+The portfolio case study is the single Observatory destination. It preserves five screenshots from the original Power BI report, an accessible lightbox with image navigation and zoom, and the downloadable native report at `/downloads/AEGIS-Intelligence-Observatory.pbix`.
+
+The legacy `/observatory/` path remains as a static GitHub Pages-compatible redirect to `/#observatory`. It is not a second dashboard and does not load a browser analytics application.
 
 ## Data boundaries
 
-Investigation-level charts are derived only from fields present in `investigation_explorer`: status, provider, retrieval mode, duration, evidence count, citation count, and domain. Source summary arrays are displayed as declared, unfiltered measurements because they cannot be reconstructed safely from every row-level field under arbitrary filters.
+The records and report use synthetic demonstration data. They are not connected to Power BI Service, production telemetry, or the separate 1,200-case AEGIS retrieval benchmark. The screenshot gallery is a static presentation of the report, not native Power BI interactivity.
 
-There is no timestamp field, so the dashboard does not invent a time series. It also does not infer root causes, evidence excerpts, semantic entailment, or overall answer accuracy.
+The Python pipeline, SQLite checks, CSV exports, report handoff, and Power BI artifact remain separate concerns. The PBIX is a portfolio artifact whose Desktop rendering was not independently revalidated in this environment.
 
 ## Local validation
 
 ```powershell
-node tools/validate_observatory.mjs
-node --check public/observatory/app.js
+npm run typecheck
+npm run lint
+npm run build
 ```
 
-Open `/observatory/` through the normal Next.js static export or a local static server. The native report remains available at `/downloads/AEGIS-Intelligence-Observatory.pbix`.
+The static export preserves the legacy redirect at `/observatory/` and the canonical case study at `/#observatory`.

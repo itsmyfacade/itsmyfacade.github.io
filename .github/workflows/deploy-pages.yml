@@ -26,8 +26,7 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm run lint
-      - run: node tools/validate_observatory.mjs
-      - run: node --check public/observatory/app.js
+      - run: node tools/validate_observatory_redirect.mjs
       - run: npm run build
       - uses: actions/upload-pages-artifact@v5
         with:

@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
+  ...(process.env.NODE_ENV === "development"
+    ? {
+        async redirects() {
+          return [{ source: "/observatory/", destination: "/#observatory", permanent: false }];
+        },
+      }
+    : {}),
 };
 
 export default nextConfig;

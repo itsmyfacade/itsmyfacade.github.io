@@ -13,6 +13,23 @@ Portfolio-Assets/
 # TypeScript build cache
 *.tsbuildinfo
 
+# Private owner documentation and asset provenance; keep outside the public tree.
+PERSONALIZATION_GUIDE.md
+public/media/README.md
+private-assets/
+
+# Local source media and temporary processing artifacts.
+public/media/source/
+*.source.mp4
+*.processing.mp4
+*.processing.mov
+*.processing.webm
+
+# Local browser captures and review exports.
+test-results/
+playwright-report/
+screenshots/
+
 # Local environment files
 .env*
 !.env.example

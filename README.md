@@ -14,12 +14,12 @@ An evidence-grounded AI investigation application built with Python, FastAPI, La
 
 ### AEGIS Intelligence Observatory
 
-A deterministic Python ETL and analytics companion using SQLite, SQL validation, CSV exports, a native Power BI report, and a static browser dashboard. Observatory records are synthetic AEGIS-compatible demonstration data and do not represent production telemetry.
+A deterministic Python ETL and analytics project using SQLite validation, CSV exports, and a user-authored Microsoft Power BI report. Observatory records are synthetic AEGIS-compatible demonstration data and do not represent production telemetry.
 
-- [Interactive browser companion](https://itsmyfacade.github.io/observatory/)
+- [Open the Observatory case study](https://itsmyfacade.github.io/#observatory)
 - [Download the Power BI report](https://itsmyfacade.github.io/downloads/AEGIS-Intelligence-Observatory.pbix)
 
-The browser dashboard is separate from the native Power BI report and is not a Power BI embed.
+The case study presents five preserved screenshots from the original Power BI report and keeps the native `.pbix` available for download. It is not a Power BI Service embed or live analytics service. See [Observatory notes](docs/OBSERVATORY.md) for the Python pipeline, report handoff, and data boundaries.
 
 ### Sentiment Lab
 
@@ -61,7 +61,7 @@ npm run build
 npm audit --audit-level=high
 ```
 
-The site uses Next.js static export for GitHub Pages. The deployment workflow runs the validation commands, publishes the generated `out/` directory, and deploys through GitHub Pages. The portfolio itself is not Dockerized.
+The site uses Next.js static export for GitHub Pages. The deployment workflow runs the validation commands, publishes the generated `out/` directory, and deploys through GitHub Pages. The portfolio itself is not Dockerized. Private source-asset handling and the limits of browser-delivered media are documented in [Private asset workflow](docs/PRIVATE_ASSET_WORKFLOW.md); no private asset credentials are shipped to the client.
 
 ## Evidence and accessibility
 
